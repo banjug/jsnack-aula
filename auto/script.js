@@ -15,38 +15,60 @@ const cars = [
         'fuel' : 'benzina'
     },
     {
-        'brand' : 'VolksWagen',
-        'model' : 'Golf',
+        'brand' : 'Fiat',
+        'model' : 'Panda',
         'fuel' : 'gpl'
     },
     {
-        'brand' : 'Tesla',
-        'model' : 'S',
+        'brand' : 'Fiat',
+        'model' : '500',
         'fuel' : 'metano'
     },
     {
-        'brand' : 'Tesla',
-        'model' : 'S',
+        'brand' : 'Dacia',
+        'model' : 'Spring',
         'fuel' : 'elettrico'
     },
     {
-        'brand' : 'Tesla',
-        'model' : 'S',
-        'fuel' : 'diesel'
-    },
-    {
-        'brand' : 'Tesla',
-        'model' : 'S',
-        'fuel' : 'diesel'
-    },
-    {
-        'brand' : 'Tesla',
-        'model' : 'S',
+        'brand' : 'VolksWagen',
+        'model' : 'Golf',
         'fuel' : 'benzina'
     },
     {
-        'brand' : 'Tesla',
-        'model' : 'S',
+        'brand' : 'Volvo',
+        'model' : 'V90',
+        'fuel' : 'diesel'
+    },
+    {
+        'brand' : 'Toyota',
+        'model' : 'Yaris',
+        'fuel' : 'benzina'
+    },
+    {
+        'brand' : 'Hyundai',
+        'model' : 'Ioniq',
         'fuel' : 'elettrico'
     },
 ];
+
+let listaBenzina = [];
+let listaDiesel = [];
+let listaAltri = [];
+
+for (let i = 0; i < cars.length; i++) {
+    const {fuel} = cars[i];
+    if (fuel == 'benzina') {
+        listaBenzina.push(cars[i])
+    } else if (fuel == 'diesel') {
+        listaDiesel.push(cars[i])
+    } else {
+        listaAltri.push(cars[i])
+    }
+}
+
+
+
+
+console.log(listaBenzina);
+console.log(listaDiesel);
+console.log(listaAltri);
