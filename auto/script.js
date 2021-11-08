@@ -66,6 +66,9 @@ const cars = [
 //     }
 // }
 
+
+
+
 // cars.forEach((element) =>{
 //     if (element.fuel == 'benzina') {
 //         listaBenzina.push(element)
@@ -76,22 +79,40 @@ const cars = [
 //     }
 // });
 
+
+
+
+// let listaBenzina = cars.filter((element) => {
+//     if (element.fuel == 'benzina') {
+//         return true;
+//     }
+// });
+
+// let listaDiesel = cars.filter((element) => {
+//     if (element.fuel == 'diesel') {
+//         return true;
+//     }
+// });
+
+// let listaAltri = cars.filter ((element) => {
+//     if (element.fuel !== 'benzina' && element.fuel !== 'diesel') {
+//         return true;
+//     }
+// });
+
+
+
+
 let listaBenzina = cars.filter((element) => {
-    if (element.fuel == 'benzina') {
-        return true;
-    }
+    return element.fuel == 'benzina';
 });
 
 let listaDiesel = cars.filter((element) => {
-    if (element.fuel == 'diesel') {
-        return true;
-    }
+    return element.fuel == 'diesel';
 });
 
 let listaAltri = cars.filter ((element) => {
-    if (element.fuel !== 'benzina' && element.fuel !== 'diesel') {
-        return true;
-    }
+    return element.fuel !== 'benzina' && element.fuel !=='diesel';
 });
 
 
