@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bike-info {
+    margin: 20px 0;
+    width: 25%;
+}
+
+span {
+    font-weight: bold;
+}
