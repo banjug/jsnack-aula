@@ -55,18 +55,26 @@ let listaBenzina = [];
 let listaDiesel = [];
 let listaAltri = [];
 
-for (let i = 0; i < cars.length; i++) {
-    const {fuel} = cars[i];
-    if (fuel == 'benzina') {
-        listaBenzina.push(cars[i])
-    } else if (fuel == 'diesel') {
-        listaDiesel.push(cars[i])
+// for (let i = 0; i < cars.length; i++) {
+//     const {fuel} = cars[i];
+//     if (fuel == 'benzina') {
+//         listaBenzina.push(cars[i])
+//     } else if (fuel == 'diesel') {
+//         listaDiesel.push(cars[i])
+//     } else {
+//         listaAltri.push(cars[i])
+//     }
+// }
+
+cars.forEach((element) =>{
+    if (element.fuel == 'benzina') {
+        listaBenzina.push(element)
+    } else if (element.fuel == 'diesel') {
+        listaDiesel.push(element) 
     } else {
-        listaAltri.push(cars[i])
+        listaAltri.push(element)
     }
-}
-
-
+});
 
 
 console.log(listaBenzina);
