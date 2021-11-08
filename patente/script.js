@@ -31,18 +31,22 @@ const persone = [
     },
 ];
 
-let maggiorenne = persone.filter((persona) => {
-    return persona.eta >= 18;
-});
+// let arrayTesti = [];
 
-let arrayTesti = [];
+// persone.forEach((persona) => {
+//     if (persona.eta >= 18) {
+//         arrayTesti.push(`${persona.nome} ${persona.cognome} è maggiorenne e quindi può guidare.`)
+//     } else {
+//         arrayTesti.push(`${persona.nome} ${persona.cognome} NON è maggiorenne e quindi NON può guidare.`)
+//     }
+// })
 
-persone.forEach((element) => {
-    if (maggiorenne.includes(element)) {
-        arrayTesti.push(`${element.nome} ${element.cognome} è maggiorenne e quindi può guidare.`)
+let arrayTesti = persone.map((persona) => {
+    if (persona.eta >= 18) {
+        return `${persona.nome} ${persona.cognome} è maggiorenne e quindi può guidare.`
     } else {
-        arrayTesti.push(`${element.nome} ${element.cognome} NON è maggiorenne e quindi NON può guidare.`)
+        return `${persona.nome} ${persona.cognome} NON è maggiorenne e quindi NON può guidare.`
     }
-})
+});
 
 console.log(arrayTesti);
