@@ -51,9 +51,9 @@ const cars = [
     },
 ];
 
-let listaBenzina = [];
-let listaDiesel = [];
-let listaAltri = [];
+// let listaBenzina = [];
+// let listaDiesel = [];
+// let listaAltri = [];
 
 // for (let i = 0; i < cars.length; i++) {
 //     const {fuel} = cars[i];
@@ -66,13 +66,31 @@ let listaAltri = [];
 //     }
 // }
 
-cars.forEach((element) =>{
+// cars.forEach((element) =>{
+//     if (element.fuel == 'benzina') {
+//         listaBenzina.push(element)
+//     } else if (element.fuel == 'diesel') {
+//         listaDiesel.push(element) 
+//     } else {
+//         listaAltri.push(element)
+//     }
+// });
+
+let listaBenzina = cars.filter((element) => {
     if (element.fuel == 'benzina') {
-        listaBenzina.push(element)
-    } else if (element.fuel == 'diesel') {
-        listaDiesel.push(element) 
-    } else {
-        listaAltri.push(element)
+        return true;
+    }
+});
+
+let listaDiesel = cars.filter((element) => {
+    if (element.fuel == 'diesel') {
+        return true;
+    }
+});
+
+let listaAltri = cars.filter ((element) => {
+    if (element.fuel !== 'benzina' && element.fuel !== 'diesel') {
+        return true;
     }
 });
 
